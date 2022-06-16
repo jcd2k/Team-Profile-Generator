@@ -1,6 +1,6 @@
 const Manager = require('../lib/Manager');
 
-test('Commence', () => {
+test('commence', () => {
     it('Synthesizes the Manager object', () => {
         const manager = new Manager("Josh", 01, "josh@email.com", 12);
     

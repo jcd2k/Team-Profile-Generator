@@ -1,29 +1,14 @@
-const { typeParameterDeclaration } = require("@babel/types");
+// node modules 
+const fs = require('fs'); 
+const inquirer = require('inquirer');
 
-async function managerFunction() {
-    const initAnswers = await inquirer.prompt(initQuestions);
-    const managerObj = {
-        name: initAnswers.name,
-        email: initAnswers.email,
-        employeeID: initAnswers.employeeID,
-        officeNumber: initAnswers.officeNumber
-    };
-    teamArr.push(managerObj);
-    console.log(teamArr);
-    promptAnswers = initAnswers;
-    return promptAnswers;
-}
+// roles
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern'); 
 
-async function engineerFunction() {
-    const initAnswers = await inquirer.prompt(initQuestions);
-    const managerObj = {
-        name: initAnswers.name,
-        email: initAnswers.email,
-        employeeID: initAnswers.employeeID,
-        officeNumber: initAnswers.officeNumber
-    };
-    teamArr.push(managerObj);
-    console.log(teamArr);
-    promptAnswers = initAnswers;
-    return promptAnswers;
-}
+// html synthesis
+const createHTML = require('./src/page-template');
+
+// establishes team array
+const team = [];

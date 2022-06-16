@@ -1,6 +1,6 @@
 const Engineer = require('../lib/Engineer');
 
-test('Commence', () => {
+test('commence', () => {
     it('Synthesizes the Engineer object', () => {
         const engineer = new Engineer("Josh", 01, "josh@email.com", "jcd2k");
     

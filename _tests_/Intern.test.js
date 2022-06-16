@@ -1,6 +1,6 @@
 const Intern = require('../lib/Intern');
 
-test('Commence', () => {
+test('commence', () => {
     it('Synthesizes the Intern object', () => {
         const intern = new Intern("Josh", 01, "josh@email.com", "OSCU");
     
