@@ -1,38 +1,31 @@
 const Employee = require('../lib/Employee')
 
-test('Employee', () => {
+test("Object creation from Employee constructor function", () => {
+    const employee = new Employee("Josh", 01, "josh@email.com");
+    expect(employee.name).toEqual(expect.any(String));
+    expect(employee.id).toEqual(expect.any(Number));
+    expect(employee.email).toEqual(expect.any(String));
+    }
+)
 
-   test("commence", () => {
-        it("Expects object creation from Employee constructor function", () => {
-            const employee = new Employee("Josh", 01, "josh@email.com");
-            expect(employee.name).toEqual(expect.any(String));
-            xpect(employee.id).toEqual(expect.any(Number));
-            expect(employee.email).toEqual(expect.any(String));
-        });
-    });
-})
 
-test('getId', () => {
-    it('retrieves employee id', () => {
+test('retrieve employee id', () => {
         const employee = new Employee("Josh", 01, "josh@email.com");
 
         expect(employee.getName()).toEqual(expect.any(String));
-    });
-});
+    }
+)
 
-test('getEmail', () => {
-    it('retrieves employee email', () => {
+test('retrieve employee email', () => {
         const employee = new Employee("Josh", 01, "josh@email.com");
 
         expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email.toString()));
-    });
-});
+    }
+)
 
-test('getRole', () => {
-    it('retrieves "Employee"', () => {
+test('retrieve "Employee"', () => {
         const employee = new Employee("Josh", 01, "josh@email.com");
 
         expect(employee.getRole()).toEqual(expect.ant(String));
-    });
-});
-
+    }
+)
